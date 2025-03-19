@@ -11,4 +11,6 @@ module co.edu.uniquindio.proyecto.proyectoapp {
 
     exports co.edu.uniquindio.proyecto.proyectoapp.controller;
 
+    opens co.edu.uniquindio.proyecto.proyectoapp.model to javafx.base;
+
 }
