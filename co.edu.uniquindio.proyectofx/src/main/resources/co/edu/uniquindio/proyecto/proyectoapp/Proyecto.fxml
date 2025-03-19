@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane fx:controller="co.edu.uniquindio.proyecto.proyectoapp.controller.ProyectoController"
+         maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+         prefHeight="547.0" prefWidth="752.0" tabClosingPolicy="UNAVAILABLE"
+         xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+    <tabs>
+        <Tab text="Gestión Proyectos">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <Label layoutX="38.0" layoutY="18.0" text="Nombre proyecto:"/>
+                        <Label layoutX="38.0" layoutY="127.0" text="Lista empleados:"/>
+                        <Label layoutX="38.0" layoutY="53.0" text="Código proyecto:"/>
+                        <Label layoutX="38.0" layoutY="90.0" text="Departamento:"/>
+                        <TextField fx:id="txtNombreProyecto" layoutX="160.0" layoutY="14.0" prefHeight="25.0" prefWidth="217.0"/>
+                        <TextField fx:id="txtCodigoProyecto" layoutX="160.0" layoutY="49.0" prefHeight="25.0" prefWidth="217.0"/>
+                        <ComboBox fx:id="cmbDepartamento" layoutX="160.0" layoutY="86.0" prefHeight="25.0" prefWidth="218.0"/>
+                        <ComboBox fx:id="cmbListaEmpleados" layoutX="160.0" layoutY="123.0" prefHeight="25.0" prefWidth="218.0"/>
+                        <TableView fx:id="tblProyectos" layoutX="38.0" layoutY="210.0" prefHeight="254.0" prefWidth="644.0">
+                            <columns>
+                                <TableColumn prefWidth="109.0" text="Nombre Proyecto"/>
+                                <TableColumn prefWidth="141.0" text="Código Proyecto"/>
+                                <TableColumn prefWidth="153.0" text="Departamento"/>
+                                <TableColumn prefWidth="240.0" text="Lista Empleados"/>
+                            </columns>
+                        </TableView>
+                        <Button fx:id="btnEliminarProyecto" layoutX="306.0" layoutY="473.0" mnemonicParsing="false"
+                                onAction="#onEliminarProyecto" text="Eliminar proyecto"/>
+                        <Button fx:id="btnCrearProyecto" layoutX="211.0" layoutY="165.0" mnemonicParsing="false"
+                                onAction="#onCrearProyecto" text="Crear proyecto"/>
+                        <Button fx:id="btnActualizarProyecto" layoutX="415.0" layoutY="165.0" mnemonicParsing="false"
+                                onAction="#onActualizarProyecto" text="Actualizar proyecto"/>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Lista Empleados">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <Label layoutX="39.0" layoutY="33.0" text="Nombre empleado:"/>
+                        <Label layoutX="42.0" layoutY="70.0" text="Código empleado:"/>
+                        <Label layoutX="42.0" layoutY="111.0" text="Departamento:"/>
+                        <TextField fx:id="txtNombreEmpleado" layoutX="157.0" layoutY="29.0" prefHeight="25.0" prefWidth="238.0"/>
+                        <TextField fx:id="txtCodigoEmpleado" layoutX="157.0" layoutY="66.0" prefHeight="25.0" prefWidth="238.0"/>
+                        <ComboBox fx:id="cmbDepartamentoEmpleado" layoutX="157.0" layoutY="107.0" prefHeight="25.0" prefWidth="239.0"/>
+                        <Button fx:id="btnAgregarEmpleado" layoutX="319.0" layoutY="161.0" mnemonicParsing="false"
+                                onAction="#onAgregarEmpleado" text="Agregar empleado"/>
+                        <Button fx:id="btnEliminarEmpleado" layoutX="319.0" layoutY="466.0" mnemonicParsing="false"
+                                onAction="#onEliminarEmpleado" text="Eliminar empleado"/>
+                        <TableView fx:id="tblEmpleados" layoutX="89.0" layoutY="203.0" prefHeight="246.0" prefWidth="567.0">
+                            <columns>
+                                <TableColumn prefWidth="205.0" text="Nombre Empleado"/>
+                                <TableColumn prefWidth="186.0" text="Código Empleado"/>
+                                <TableColumn prefWidth="175.0" text="Departamento"/>
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>
